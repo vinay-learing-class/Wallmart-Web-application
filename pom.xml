@@ -5,7 +5,7 @@
 	<groupId>com.mt</groupId>
 	<artifactId>maven-web-application</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.2.0</version>
 	
 	<name>maven-web-application</name>
 
@@ -16,18 +16,36 @@
 		<url>http://mithuntechnologies.com/</url>
 	</organization>
 
+	<!--Sonar Qube configuration-->
+
 	<properties>
 		<jdk.version>1.8</jdk.version>
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://13.232.5.182:9000/</sonar.host.url>
+		<sonar.host.url>http://192.168.29.217:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
 		<sonar.password>admin</sonar.password>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 	</properties>
+
+	<!--
+		<repositories>
+		<repository>
+			<id>nexus</id>
+			<url>http://192.168.29.217:8081/repository/maven-remote-repo/</url>
+		</repository>
+		</repositories>
+	-->
+
+		<repositories>
+		<repository>
+			<id>nexus</id>
+			<url>http://192.168.29.217:8081/repository/mevan-proxy-server/</url>
+		</repository>
+		</repositories>
 
 	<dependencies>
 		
@@ -37,7 +55,7 @@
 			<version>20160212</version>
 		</dependency>
 		
-		<!-- test dependencies -->
+	
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -90,22 +108,30 @@
 			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
+
+		<!--			<dependency>
+			  <groupId>com</groupId>
+ 				 <artifactId>mail</artifactId>
+  				<version>1.2.3</version>
+  				<type>war</type>
+			</dependency>
+		-->
 		
 	</dependencies>
 	
 	<distributionManagement>
 	
-	    <repository>
+		<!--  <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://13.235.103.28:8081/repository/flipkart-releases/</url>
+	      <url>http://192.168.29.217:8081/repository/wallmart-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://13.235.103.28:8081/repository/flipkart-snapshot/</url>
-	    </snapshotRepository>
+	      <url>http://192.168.29.217:8081/repository/wallmart-snapshot/</url>
+		</snapshotRepository>-->
 	    
 	</distributionManagement>
 	
@@ -119,7 +145,7 @@
 				<version>3.3</version>
 				<configuration>
 					<source>${jdk.version}</source>
-					<target>${jdk.version}</target>
+					<target>${jdk.version}</target>`:wq
 				</configuration>
 			</plugin>
 
