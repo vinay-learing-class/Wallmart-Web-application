@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1 align="center">Welcome to Belgaum Traning testing Job mahantesh nagar belgaum karnatak</h1>
-<h1 align="center"> Vinay alloli- Very Good Training center for DevOps with AWS in Maratha Halli and also for Job Assitance Job Support also...Teaching Real Time scnerios</h1>
+<h1 align="center">shweta - Very Good Training center for DevOps with AWS in Maratha Halli and also for Job Assitance Job Support also...Teaching Real Time scnerios</h1>
 <hr>
 <div style="text-align: center;">
 	<span>
